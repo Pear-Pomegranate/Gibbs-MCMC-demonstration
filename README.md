@@ -26,12 +26,16 @@ The prior $f(\theta)$ is often assumed to be a normal distribution. The likeliho
 2. Sampling from $b^{(1)} \sim f(b| a^{(0)}, \tau^{(0)}, D)$, to obtain a sample for $b^{(1)}$.
     
 To work out the posterior we start from the prior of $b$, and its p.d.f. is 
+
 $$f(b) = \sqrt{\frac{\tau_0}{2\pi}}e^{-\frac{(b-\mu_0)^2\tau_0}{2}}$$
 because for the proposed model $y_i \sim N(ax_i+b,1/\tau)$, therefore
+
 $f(y_i,x_i| b,a,\tau) = \sqrt{\frac{\tau}{2\pi}}\exp(-\frac{\tau(y_i-ax_i-b)^2}{2})$
+
 $$f(D|b,a,\tau) = \prod_{i=1}^N f(y_i,x_i| b,a,\tau)$$
 
 As $f(b|D,a,\tau)\propto f(D|b,a,\tau) f(b)$, we can work out the conditional probability distribution
+
 $$
 (b|D,a,\tau)  \sim N(\frac{\tau_0 \mu_0+ \tau \sum_{i=1}^N (y_i-ax_i)}{\tau_0+N\tau}, \frac{1}{\tau_0+N\tau})
 $$
@@ -40,6 +44,7 @@ $$
 To prove the above we only need to take the natural log of both sides of the p.d.f. and match their coefficients to a normal distribution, and in fact that is also how we obtained the mean and vairance of the posterior in the above expression.
 
 Similarly, the other posterior are subject to
+
 $$ (a|D,b,\tau) \sim 
 N\left(\frac{\tau_1 \mu_1 + \tau \sum_{i=1}^{N} (y_i - b)x_i}{\tau_1 + \tau \sum_{i=1}^{N} x_i^2}, \frac{1}{\tau_1 + \tau \sum_{i=1}^{N} x_i^2}\right),
 $$
