@@ -37,12 +37,6 @@ $$f(D|b,a,\tau) = \prod_{i=1}^N f(y_i,x_i| b,a,\tau)$$
 
 As $f(b|D,a,\tau)\propto f(D|b,a,\tau) f(b)$, we can work out the conditional probability distribution
 
-$$
-(b|D,a,\tau)  \sim N\left(\frac{\tau_0 \mu_0+ \tau \sum_{i=1}^N (y_i-ax_i)}{\tau_0+N\tau}, \frac{1}{\tau_0+N \tau}\right)
-$$
-
-Alternatively, you can use HTML for better rendering:
-
 <p align="center">
   <img src="https://latex.codecogs.com/svg.latex?\bg_white&space;(b|D,a,\tau)&space;\sim&space;N\left(\frac{\tau_0&space;\mu_0&plus;&space;\tau&space;\sum_{i=1}^N&space;(y_i-ax_i)}{\tau_0&plus;N\tau},&space;\frac{1}{\tau_0&plus;N&space;\tau}\right)" alt="formula">
 </p>
