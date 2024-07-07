@@ -46,7 +46,7 @@ To prove the above we only need to take the natural log of both sides of the p.d
 Similarly, the other posterior are subject to
 
 $$ (a|D,b,\tau) \sim 
-N\left(\frac{\tau_1 \mu_1 + \tau \sum_{i=1}^{N} (y_i - b)x_i}{\tau_1 + \tau \sum\limits_{i=1}^{N} x_i^2}, \frac{1}{\tau_1 + \tau \sum_{i=1}^{N} x_i^2}\right),
+N\left(\frac{\tau_1 \mu_1 + \tau \sum\limits_{i=1}^{N} (y_i - b)x_i}{\tau_1 + \tau \sum\limits_{i=1}^{N} x_i^2}, \frac{1}{\tau_1 + \tau \sum_{i=1}^{N} x_i^2}\right),
 $$
 
 where we have assumed 
@@ -60,7 +60,7 @@ f(\tau) = \frac{\beta}{\Gamma(\alpha) } (\beta\tau)^{\alpha-1} e^{-\beta \tau}
 $$
 
 $$
-\tau \mid D, b, a \sim \Gamma \left( \alpha + \frac{N}{2}, \beta + \frac{1}{2} \sum_{i=1}^{N} (y_i - a x_i - b)^2 \right)
+\tau \mid D, b, a \sim \Gamma \left( \alpha + \frac{N}{2}, \beta + \frac{1}{2} \sum\limits_{i=1}^{N} (y_i - a x_i - b)^2 \right)
 $$
 
 3. Sample $a^{(1)}$ from $f (a|D,b^{(1)},\tau^{(0)})$
