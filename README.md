@@ -48,9 +48,12 @@ Similarly, the other posterior are subject to
 $$ (a|D,b,\tau) \sim 
 N\left(\frac{\tau_1 \mu_1 + \tau \sum_{i=1}^{N} (y_i - b)x_i}{\tau_1 + \tau \sum_{i=1}^{N} x_i^2}, \frac{1}{\tau_1 + \tau \sum_{i=1}^{N} x_i^2}\right),
 $$
-where we have assumed $$ a \sim N(\mu_1,1/\tau_1)$$
+where we have assumed 
+$$ a \sim N(\mu_1,1/\tau_1)$$
 
-For the posterior distribution of the variance of a normal distribution, we choose the prior to be the inverse Gamma distribution, so that the posterior is the inverse Gamma as well (This is a technique called conjugate prior). But we are using the precision variable instead of the variance, so the prior is subject to Gamma distribution.  $ \tau \sim \Gamma(\alpha, \beta)$
+For the posterior distribution of the variance of a normal distribution, we choose the prior to be the inverse Gamma distribution, so that the posterior is the inverse Gamma as well (This is a technique called conjugate prior). But we are using the precision variable instead of the variance, so the prior is subject to Gamma distribution.  
+$ \tau \sim \Gamma(\alpha, \beta)$
+
 $$
 f(\tau) = \frac{\beta}{\Gamma(\alpha) } (\beta\tau)^{\alpha-1} e^{-\beta \tau}
 $$
