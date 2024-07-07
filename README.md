@@ -36,10 +36,9 @@ $f(y_i,x_i| b,a,\tau) = \sqrt{\frac{\tau}{2\pi}}\exp(-\frac{\tau(y_i-ax_i-b)^2}{
 $$f(D|b,a,\tau) = \prod_{i=1}^N f(y_i,x_i| b,a,\tau)$$
 
 As $f(b|D,a,\tau)\propto f(D|b,a,\tau) f(b)$, we can work out the conditional probability distribution
-
-$
+$$
 (b|D,a,\tau)  \sim N(\frac{\tau_0 \mu_0+ \tau {\sum_{i=1}^N } (y_i-ax_i)}{\tau_0+N\tau}, \frac{1}{ \tau_0+N \tau})
-$
+$$
 
 
 To prove the above we only need to take the natural log of both sides of the p.d.f. and match their coefficients to a normal distribution, and in fact that is also how we obtained the mean and vairance of the posterior in the above expression.
