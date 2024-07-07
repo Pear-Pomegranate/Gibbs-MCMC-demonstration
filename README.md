@@ -20,7 +20,8 @@ where $y = ax+b+\epsilon$, where the random noise $\epsilon \sim N(0,\sigma ^2 =
     
 For this simple model, the conditional probalitity distribution function $f(\theta | D)$, i.e. posterior distribution can be worked out analytically. Here, the probability event $\{D\}$ stands for given (seen) the collected input data set $D$ as a condition (event). Event $\{\theta\}$ stands for the case when the hyperparamters in the proposed model is descibed by $\theta$. For linear model, data set $D$ is a set of $(x,y)$ coordinates in feature-target space.
 
-The prior $f(\theta)$ is often assumed to be a normal distribution. The likelihood $f(D|\theta)$ is modeled as a normal due to the proposed modeling $y = ax+b+\epsilon$, where $\epsilon \sim N(0,1/\tau)$.
+The prior $f(\theta)$ is often assumed to be a normal distribution. The likelihood $f(D|\theta)$ is modeled as a normal due to the proposed modeling $y = ax+b+\epsilon$, where 
+$\epsilon \sim N(0,1/\tau)$.
 
 
 2. Sampling from $b^{(1)} \sim f(b| a^{(0)}, \tau^{(0)}, D)$, to obtain a sample for $b^{(1)}$.
@@ -37,7 +38,7 @@ $$f(D|b,a,\tau) = \prod_{i=1}^N f(y_i,x_i| b,a,\tau)$$
 As $f(b|D,a,\tau)\propto f(D|b,a,\tau) f(b)$, we can work out the conditional probability distribution
 
 $$
-(b|D,a,\tau)  \sim N(\frac{\tau_0 \mu_0+ \tau \sum_{i=1}^N (y_i-ax_i)}{\tau_0+N\tau}, \frac{1}{\tau_0+N\tau})
+(b|D,a,\tau)  \sim N(\frac{\tau_0 \mu_0+ \tau \sum_{i=1}^N (y_i-ax_i)}{\tau_0+N\tau}, \frac{1}{ \tau_0+N \tau})
 $$
 
 
